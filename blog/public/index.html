@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>My Blog</title>
+<link rel="stylesheet" href="styles.css">
+<script src="blog.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Blogger</h1>
+    </header>
+    <main>
+        <section>
+            <form id="blog-post">
+                <div>
+                    <label for="title">Title</label>
+                    <input id="title" type="text" name="title" required>
+                </div>
+                <div>
+                    <label for="post">Post</label>
+                    <textarea id="post" name="post" type="text" rows="5" cols="50" required>Add your blog post here...</textarea>
+                </div>
+                <button>Add post</button>
+            </form>
+        </section>
+        <section id="blogs">
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
