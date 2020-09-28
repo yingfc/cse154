@@ -1,0 +1,85 @@
+html {
+    font-family: monospace;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+body,
+main,
+section,
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+}
+
+main {
+    flex-basis: 100%;
+}
+
+main img {
+    max-height: 40vh;
+}
+
+section {
+    justify-content: space-evenly;
+    flex-basis: 100%;
+}
+
+footer {
+    flex-basis: 10%;
+    font-size: 18px;
+}
+
+/* ---- My Big Button ---- */
+
+button {
+    font-family: monospace;
+    font-size: 34px;
+    width: 60vw;
+    height: 40vh;
+    border-radius: 20px;
+    background-color: lightgray;
+    border: 10px dashed green;
+    cursor: pointer;
+    outline: none;
+}
+
+/* ---- Anonymous ---- */
+
+.anonymous img {
+    filter: brightness(0);
+}
+
+.anonymous img.reveal {
+    transition: filter 1s ease;
+    filter: brightness(1);
+}
+
+/* ---- Dominoes ---- */
+.dominoes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: initial;
+}
+
+.dominoes div {
+    width: 5vw;
+    height: 5vw;
+    margin: 0.1vw;
+    background-color: black;
+    display: block;
+}
+
+.dominoes div:nth-child(2n + 1) {
+    background-color: green;
+}

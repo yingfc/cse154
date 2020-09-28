@@ -1,0 +1,41 @@
+<!--
+  A website that holds Mimikyu's deepest secret behind a login screen.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSE 154 HW Solution Stash</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Want solutions to all CSE 154 HW assignments?</h1>
+    </header>
+    <section id="intro">
+      <h2>Rob can't know! shhhhhh!</h2>
+      <img src="hehe.gif" alt="devious raccoon">
+      <button id="login-btn">Sneaky Students Only</button>
+    </section>
+    <section id="login" class="hidden">
+      <h2>Enter Credentials to Proceed</h2>
+      <fieldset>
+        <legend>Login Details</legend>
+        <label for="username">Username:</label>
+        <input type="text" id="username">
+        <label for="password">Password:</label>
+        <input type="text" id="password">
+      </fieldset>
+      <button id="submit-btn">Submit</button>
+    </section>
+    <section id="rejected" class="hidden">
+      <p>Access Denied!</p>
+      <img src="denied.gif" alt="woman saying access denied">
+    </section>
+    <section id="accepted" class="hidden">
+      <img src="you-thought.gif" alt="laughing man">
+      <p>Gotcha! Come on now, go finish your homework!</p>
+    </section>
+  </body>
+</html>

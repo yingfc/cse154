@@ -1,0 +1,40 @@
+/*
+ * Provides basic styles for index.html.
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body {
+  text-align: center;
+  background-color: aqua;
+  margin: 0;
+}
+
+body, button {
+  font-family: Roboto, sans-serif;
+}
+
+button {
+  margin-top: 1em;
+}
+
+img {
+  border-radius: 2em;
+  border: 0.5em solid black;
+  display: block;
+  margin: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+#rejected p {
+  font-size: 40pt;
+  font-weight: bold;
+  color: red;
+}
+
+#accepted p {
+  font-size: 20pt;
+}

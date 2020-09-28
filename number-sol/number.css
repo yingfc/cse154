@@ -1,0 +1,13 @@
+div {
+  display: flex;
+  height: 200px;
+  width: 500px;
+  border: solid #698733 0.5em;
+  border-radius: 1em;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+div img {
+  height: 70%;
+}
