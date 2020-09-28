@@ -9,11 +9,20 @@ app.use(multer().none());
 // 1.1 - What kind of endpoint?
 // 1.2 - Do we need additional modules to handle this request?
 app.post("/addItem", function (req, res) {
-    let name = req.body.name;
-    let sid = req.body.sid;
-    let question = req.body.question;
-    if (name && sid && question) {
-    } else {
+    try {
+        let name = req.body.name;
+        let sid = req.body.sid;
+        let question = req.body.question;
+        if (name && sid && question) {
+            addStudent(name, sid, question);
+            res.json({ result: "all good" });
+        } else {
+            res.status(400)
+                .type("text")
+                .send("missing one or more required params");
+        }
+    } catch (error) {
+        res.status(500).type("text").send("server error");
     }
 });
 

@@ -7,22 +7,21 @@
     // Part 1: Add event listener
     function init() {
         document
-            .addEventListener("input-form")
+            .getElementById("input-form")
             .addEventListener("submit", submitRequest);
     }
 
     // Part 2: Make request to our endpoint
     async function submitRequest(e) {
         e.preventDefault();
-        let data = new FormData(document.addEventListener("input-form"));
-        // let data = new FormData(e.currentTarget);
+        let data = new FormData(document.getElementById("input-form"));
         try {
             let resp = await fetch(URL, { method: "POST", body: data });
             checkStatus(resp);
             resp = await resp.json();
             showResponse(resp);
-        } catch (error) {
-            handleError(error);
+        } catch (e) {
+            handleError(e);
         }
     }
 
