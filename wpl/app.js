@@ -12,6 +12,9 @@ app.post("/addItem", function (req, res) {
     let name = req.body.name;
     let sid = req.body.sid;
     let question = req.body.question;
+    if (name && sid && question) {
+    } else {
+    }
 });
 
 // Part 2: Access the necessary data from the request
