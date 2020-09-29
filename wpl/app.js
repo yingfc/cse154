@@ -2,19 +2,20 @@
 const express = require("express");
 const app = express();
 const multer = require("multer");
+const fs = require("fs").promises;
 
 app.use(multer().none());
 
 // Part 1: Add an endpoint for the queue
 // 1.1 - What kind of endpoint?
 // 1.2 - Do we need additional modules to handle this request?
-app.post("/addItem", function (req, res) {
+app.post("/addItem", async function (req, res) {
     try {
         let name = req.body.name;
         let sid = req.body.sid;
         let question = req.body.question;
         if (name && sid && question) {
-            addStudent(name, sid, question);
+            await addStudent(name, sid, question);
             res.json({ result: "all good" });
         } else {
             res.status(400)
@@ -36,9 +37,10 @@ app.post("/addItem", function (req, res) {
 // 4.2 - Handle 500
 
 /* Adds student to some kind of storage */
-function addStudent(name, id, question) {
+async function addStudent(name, id, question) {
     // For now, just log to the console
-    console.log("Student added: ", name, id, question);
+    // console.log("Student added: ", name, id, question);
+    await fs.appendFile("wpl.txt", name + " " + id + " " + question + "\n");
 }
 
 app.use(express.static("public"));
